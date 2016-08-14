@@ -11,33 +11,43 @@
 		%link{rel:"stylesheet", href:"css/style.css"}
 		%meta{name:"viewport", content:"width=device-width, initial-scale=1"}
 		%script{src:"js/vendor/modernizr-2.8.3.min.js"}
-%body
-	="<!--[if lt IE 9]>"
-	%p{class:"browserupgrade"}
-		Estás usando un navegador 
-		%strong desactualizado.
-		Por favor
-		%a{href:"http://browserhappy.com/"}
-			actualiza tu navegador 
-		para una mejor experiencia
-	="<![endif]-->"
-	.video-container
-		%video{autoplay:true,loop:true,width:"1280",heigiht:"720"}
-			%source{src:"/videos/mp4/bbq.mp4",typ:"video/mp4",poster:"/videos/images/bbq.jpg"}
-			%source{src:"/videos/webm/bbq.webm",typ:"video/webm"}
-	.row.full-height.middle-xs.center-xs.relative.up
-		.col-xs-12
-			.box.white-text
-				%img{src:"/imgs/logo.png", width:200}
-				%h1.dancing-script.title.no-margin Restaurante Facilito
-				%p#is-open 
-					%i.glyphicon.glyphicon-time
-					Abierto Ahora
-		%nav.fixed.top.right.navigation.white-text#navigation
-			-menu = ["Home", "Menú", "Galería", "Contacto", "Cómo llegar"]
-			%ul.list-inline
-				-menu.each do |item|
-					%li
-						%a{}= item
-		.absolute.medium.black.large-padding.left.bottom.white-text.full-width#description
-			Atención cálida y comida preparada por artistas
+	%body
+		="<!--[if lt IE 9]>"
+		%p{class:"browserupgrade"}
+			Estás usando un navegador 
+			%strong desactualizado.
+			Por favor
+			%a{href:"http://browserhappy.com/"}
+				actualiza tu navegador 
+			para una mejor experiencia
+		="<![endif]-->"
+		.video-container
+			%video{autoplay:true,loop:true,width:"1280",heigiht:"720"}
+				%source{src:"/videos/mp4/bbq.mp4",typ:"video/mp4",poster:"/videos/images/bbq.jpg"}
+				%source{src:"/videos/webm/bbq.webm",typ:"video/webm"}
+		.row.full-height.middle-xs.center-xs.relative.up
+			.col-xs-12
+				.box.white-text
+					%img{src:"/imgs/logo.png", width:200}
+					%h1.dancing-script.title.no-margin Restaurante Facilito
+					%p#is-open 
+						%i.glyphicon.glyphicon-time
+						Abierto Ahora
+			%nav.fixed.top.right.navigation.white-text#navigation
+				-menu = ["Home", "Menú", "Galería", "Contacto", "Cómo llegar"]
+				%ul.list-inline
+					-menu.each do |item|
+						%li
+							%a{}= item
+			.absolute.black.large-padding.left.bottom.white-text.full-width#description
+				.row.middle-xs
+					.col-xs-7.col-sm-6.white-text.medium
+						Atención cálida y comida preparada por artistas
+					.col-sm-6.col-xs
+						.box
+							%nav.text-right.navigation
+								%ul.list-inline
+									-menu.each do |item|
+										%li
+											%a{}= item
+	.full-height
