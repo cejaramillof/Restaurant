@@ -30,10 +30,14 @@
 			.box.white-text
 				%img{src:"/imgs/logo.png", width:200}
 				%h1.dancing-script.title.no-margin Restaurante Facilito
-				%p#is-open Abierto Ahora
+				%p#is-open 
+					%i.glyphicon.glyphicon-time
+					Abierto Ahora
 		%nav.fixed.top.right.navigation.white-text#navigation
 			-menu = ["Home", "Menú", "Galería", "Contacto", "Cómo llegar"]
 			%ul.list-inline
 				-menu.each do |item|
 					%li
 						%a{}= item
+		.absolute.medium.black.large-padding.left.bottom.white-text.full-width#description
+			Atención cálida y comida preparada por artistas

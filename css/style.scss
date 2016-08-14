@@ -121,13 +121,13 @@ textarea {
 		@extend .medium;
 		padding: 5px 10px;
 		transition: all 0.8s;
-		&:hover{
+		&:hover {
 			background-color: rgba(0,0,0,0.8);
 		}
 		a {
 			color:white;
 			cursor: pointer;
-			&:hover{
+			&:hover {
 				text-decoration: none;
 			}
 		}
@@ -150,7 +150,11 @@ textarea {
    Helper classes
    ========================================================================== */
 
-.white-text{
+.black {
+		background-color: #222;
+}
+
+.white-text {
 		color: white;
 }
 
@@ -164,6 +168,14 @@ textarea {
 
 .medium {
 		font-size: 1.5em;
+}
+
+.large-padding {
+		padding: 10px 15px;
+}
+
+.absolute {
+		position: absolute;
 }
 
 .fixed {
@@ -181,6 +193,15 @@ textarea {
 .right {
 	 	right: 5em;
 }
+
+.left {
+		left: 0px;
+}
+
+.bottom {
+		bottom: 0px;
+}
+
 .up {
 		z-index:5;
 }
@@ -189,11 +210,15 @@ textarea {
 		height: 100%;
 }
 
+.full-width {
+		width: 100%;
+}
+
 .row {
 		margin: 0;
 }
 
-.no-margin{
+.no-margin {
 		margin: 0px;
 }
 

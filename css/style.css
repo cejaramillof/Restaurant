@@ -124,6 +124,10 @@ textarea {
 /* ==========================================================================
    Helper classes
    ========================================================================== */
+.black {
+  background-color: #222;
+}
+
 .white-text {
   color: white;
 }
@@ -138,6 +142,14 @@ textarea {
 
 .medium, .navigation li {
   font-size: 1.5em;
+}
+
+.large-padding {
+  padding: 10px 15px;
+}
+
+.absolute {
+  position: absolute;
 }
 
 .fixed {
@@ -156,12 +168,24 @@ textarea {
   right: 5em;
 }
 
+.left {
+  left: 0px;
+}
+
+.bottom {
+  bottom: 0px;
+}
+
 .up {
   z-index: 5;
 }
 
 .full-height {
   height: 100%;
+}
+
+.full-width {
+  width: 100%;
 }
 
 .row {
