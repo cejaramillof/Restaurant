@@ -88,7 +88,7 @@ textarea {
   height: 100%;
   width: 100%;
   overflow: hidden;
-  position: relative;
+  position: absolute;
 }
 
 .video-container video {
@@ -106,6 +106,18 @@ textarea {
 /* ==========================================================================
    Helper classes
    ========================================================================== */
+.white-text {
+  color: white;
+}
+
+.relative {
+  position: relative;
+}
+
+.up {
+  z-index: 5;
+}
+
 .full-height {
   height: 100%;
 }
