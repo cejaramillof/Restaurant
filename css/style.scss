@@ -116,7 +116,12 @@ textarea {
 	}
 }
 
-
+.navigation {
+	li{
+		@extend .medium;
+		padding: 5px 10px;
+	}
+}
 
 
 
@@ -146,6 +151,10 @@ textarea {
 		font-size: 4em;
 }
 
+.medium {
+		font-size: 1.5em;
+}
+
 .fixed {
 		position: fixed;
 }
@@ -155,7 +164,7 @@ textarea {
 }
 
 .top {
-		top: 1em;
+		top: 3em;
 }
 
 .right {
