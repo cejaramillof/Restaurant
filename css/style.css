@@ -105,6 +105,20 @@ textarea {
 
 .navigation li {
   padding: 5px 10px;
+  transition: all 0.8s;
+}
+
+.navigation li:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+.navigation li a {
+  color: white;
+  cursor: pointer;
+}
+
+.navigation li a:hover {
+  text-decoration: none;
 }
 
 /* ==========================================================================
