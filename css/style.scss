@@ -146,10 +146,21 @@ textarea {
 		font-size: 4em;
 }
 
+.fixed {
+		position: fixed;
+}
+
 .relative {
 		position: relative;
 }
 
+.top {
+		top: 1em;
+}
+
+.right {
+	 	right: 5em;
+}
 .up {
 		z-index:5;
 }
@@ -160,6 +171,10 @@ textarea {
 
 .row {
 		margin: 0;
+}
+
+.no-margin{
+		margin: 0px;
 }
 
 /*
