@@ -32,9 +32,8 @@
 				%h1.dancing-script.title.no-margin Restaurante Facilito
 				%p#is-open Abierto Ahora
 		%nav.fixed.top.right.navigation.white-text#navigation
+			-menu = ["Home", "Menú", "Galería", "Contacto", "Cómo llegar"]
 			%ul.list-inline
-				%li Inicio
-				%li Menú
-				%li Galería
-				%li Contacto
-				%li Cómo llegar
+				-menu.each do |item|
+					%li
+						%a{}= item
