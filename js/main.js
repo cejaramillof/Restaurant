@@ -15,7 +15,7 @@
 		if(currentPosition < imageCounter){
 			currentPosition++
 		}else{
-			currentposition = 0
+			currentPosition = 0
 		}
 		
 		$("#gallery .inner").css({
