@@ -90,9 +90,9 @@
 								.box
 							.col-xs-5
 								.box
-									%input{type:"email",name:"email",placeholder:"Coloca tu correo electrónico"}
-									%input{type:"text",name:"name",placeholder:"Coloca tu nombre"}
-									%textarea{name:"body",placeholder:"Escribe aquí tu mensaje.."}
+									%input{type:"email",name:"email",placeholder:"Coloca tu correo electrónico",class:"input"}
+									%input{type:"text",name:"name",placeholder:"Coloca tu nombre",class:"input"}
+									%textarea{name:"body",placeholder:"Escribe aquí tu mensaje..",class:"input"}
 									%div
 										%button{type:"submit",class:"btn"}
 											Enviar
@@ -102,3 +102,4 @@
 		window.jQuery || document.write("<script src='/js/vendor/jquery-1.12.0.min.js'><\/script>")
 	%script{src:"/js/form_object.js"}
 	%script{src:"/js/main.js"}
+	%script{src:"/dist/step.js"}
