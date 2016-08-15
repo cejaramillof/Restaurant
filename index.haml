@@ -84,15 +84,15 @@
 		.row.middle-xs.full-height
 			.col-xs-12
 				.box
-					%form{action:"https://formspree.io/cejaramillof@gmail.com",method:"POST"}
+					%form{action:"https://formspree.io/cejaramillof@gmail.com",method:"POST",id:"contact-form"}
 						.row.center-xs
 							.col-xs-2.col-md-1
 								.box
 							.col-xs-5
 								.box
 									%input{type:"email",name:"email",placeholder:"Coloca tu correo electrónico"}
-									%input{name:"body",placeholder:"Coloca tu nombre"}
-									%textarea{type:"email",name:"email",placeholder:"Escribe aquí tu mensaje.."}
+									%input{type:"text",name:"name",placeholder:"Coloca tu nombre"}
+									%textarea{name:"body",placeholder:"Escribe aquí tu mensaje.."}
 									%div
 										%button{type:"submit",class:"btn"}
 											Enviar
@@ -100,4 +100,5 @@
 	%script{src:"http://code.jquery.com/jquery-3.1.0.min.js", integrity:"sha256-cCueBR6CsyA4/9szpPfrX3s49M9vUU5BgtiJj06wt/s=", crossorigin:"anonymous"}
 	%script
 		window.jQuery || document.write("<script src='/js/vendor/jquery-1.12.0.min.js'><\/script>")
+	%script{src:"/js/form_object.js"}
 	%script{src:"/js/main.js"}
