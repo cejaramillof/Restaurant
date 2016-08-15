@@ -4,8 +4,14 @@
 	let currentPosition = 0
 	
 	const imageCounter = $("[data-name='image-counter']").attr("content")
+	const email = "cejaramillof@gmail.com"
 	
-	console.log(imageCounter)
+	$("#contact-form").on("submit",function(ev){
+		ev.preventDefault()
+				
+		sendForm($(this))
+		return false
+	})
 	
 	$("#sticky-navigation").removeClass("hidden")
 	$("#sticky-navigation").slideUp(0)
