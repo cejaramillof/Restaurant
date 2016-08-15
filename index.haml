@@ -84,15 +84,18 @@
 		.row.middle-xs.full-height
 			.col-xs-12
 				.box
-					%form{action:"https://formspree.io/cejaramillof@gmail.com",method:"POST",id:"contact-form"}
+					%form{action:"https://formspree.io/cejaramillof@gmail.com",method:"POST",id:"contact-form",class:"step-form"}
 						.row.center-xs
 							.col-xs-2.col-md-1
 								.box
 							.col-xs-5
 								.box
-									%input{type:"email",name:"email",placeholder:"Coloca tu correo electrónico",class:"input"}
-									%input{type:"text",name:"name",placeholder:"Coloca tu nombre",class:"input"}
-									%textarea{name:"body",placeholder:"Escribe aquí tu mensaje..",class:"input"}
+									%fieldset.step.active
+										%input{type:"email",name:"email",placeholder:"Coloca tu correo electrónico",class:"input"}
+									%fieldset.step
+										%input{type:"text",name:"name",placeholder:"Coloca tu nombre",class:"input"}
+									%fieldset.step
+										%textarea{name:"body",placeholder:"Escribe aquí tu mensaje..",class:"input"}
 									%div
 										%button{type:"submit",class:"btn"}
 											Enviar

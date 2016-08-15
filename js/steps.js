@@ -1,4 +1,7 @@
 ;(function(){
+	
+	//$(".step:nth-child(1)").addClass("active")
+	
 	const selector = "#contact-form"
 	
 	$(selector).find(".input").on("change",(ev)=>{
