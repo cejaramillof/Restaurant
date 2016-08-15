@@ -1,1 +1,1 @@
-"use strict";!function(){$(window).scroll(function(){console.log("wiuu scroll")})}();
+"use strict";!function(){function o(){var o=$("#description"),n=o.height();return $(window).scrollTop()>$(window).height()-1.5*n}console.log($(window).height()),$(window).scroll(function(){console.log(o())})}();
