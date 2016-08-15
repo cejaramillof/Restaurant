@@ -214,6 +214,12 @@ textarea {
   box-shadow: 0px 0px 5px rgba(250, 250, 250, 0.8);
 }
 
+.path-step.active-n {
+  opacity: 1;
+  background-color: red;
+  box-shadow: 0px 0px 5px #ff0001;
+}
+
 .step-form .step {
   max-height: 0px;
   overflow: hidden;

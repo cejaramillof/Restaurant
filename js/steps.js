@@ -4,6 +4,13 @@
 	
 	const selector = "#contact-form"
 	
+	$(".step textarea").on("keydown",(ev)=>{
+		if(ev.keyCode == 13){
+			ev.preventDefault()
+			$(ev.target).blur()
+		}
+	})
+	
 	$(".path-step").on("click",(ev)=>{
 		const $current_circle = $(ev.target)
 		
@@ -17,11 +24,13 @@
 	})
 	
 	$(selector).find(".input").on("change",(ev)=>{
-		let $input = $(ev.target)
+		const $input = $(ev.target)
 		
-		let $next_step = $input.parent().next(".step")
+		const $next_step = $input.parent().next(".step")
+
+		const is_form_valid = es_valido_formulario()
 		
-		if($next_step.length > 0 ){
+		if(!is_form_valid && $next_step.length > 0){
 			siguiente($next_step)
 		}else{
 			validar_formulario()
@@ -30,24 +39,26 @@
 		
 	})
 	// Helpers
+	
 	function validar_formulario(){
-		document.querySelector(selector).checkValidity()
+		if(es_valido_formulario()){
+			enviar_formulario()
+		}else{
+			let $fieldset_invalido = $(selector).find(".input:invalid").first().parent()
+			siguiente($fieldset_invalido)
+			$(".path-step.active").addClass("active-n")
+		}
 	}
 	
 	function es_valido_formulario(){
-		if(es_valido_formulario()){
-			
-		}else{
-			let $fieldset_invalido = $(selector).find(".input:invalid").first().parent
-			siguiente($fieldset_invalido)
-		}
+		return document.querySelector(selector).checkValidity()
 	}
 	
 	function siguiente($next_step){
 		$(".step.active").removeClass("active")
 		$next_step.addClass("active")
 		$next_step.find(".input").focus()
-		
+
 		// Coordinar los circulos
 		const posicion = ($next_step.index(".step") * 2) + 1
 		
@@ -55,12 +66,25 @@
 		
 		focus_circle($circle)
 		
-		//$next_step.focus()
 	}
 	
 	function focus_circle($circle){
 		$(".path-step.active").removeClass("active")
 		$circle.addClass("active")
+	}
+	
+	function enviar_formulario(){
+	const $form = $(selector)
+	$.ajax({
+			url: $form.attr("action"), 
+			method: "POST",
+			data: $form.formObject(),
+			dataType: "json",
+			success: function(){
+				$form.slideUp()
+				$("#info-contacto").html("Enviamos tu mensaje, pronto nos pondremos en contacto contigo :)")
+			}
+		})
 	}
 	
 })()
