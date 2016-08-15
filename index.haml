@@ -86,8 +86,11 @@
 				.box
 					%form{action:"https://formspree.io/cejaramillof@gmail.com",method:"POST",id:"contact-form",class:"step-form"}
 						.row.center-xs
-							.col-xs-2.col-md-1
+							.col-xs-2.col-md-1.text-center
 								.box
+									-3.times do |i|
+										.path-step
+										%br
 							.col-xs-5
 								.box
 									%fieldset.step.active
