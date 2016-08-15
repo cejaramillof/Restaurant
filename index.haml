@@ -91,11 +91,11 @@
 							.col-xs-5
 								.box
 									%fieldset.step.active
-										%input{type:"email",name:"email",placeholder:"Coloca tu correo electrónico",class:"input"}
+										%input{type:"email",name:"email",placeholder:"Coloca tu correo electrónico",class:"input",required:true}
 									%fieldset.step
-										%input{type:"text",name:"name",placeholder:"Coloca tu nombre",class:"input"}
+										%input{type:"text",name:"name",placeholder:"Coloca tu nombre",class:"input",required:true}
 									%fieldset.step
-										%textarea{name:"body",placeholder:"Escribe aquí tu mensaje..",class:"input"}
+										%textarea{name:"body",placeholder:"Escribe aquí tu mensaje..",class:"input",required:true}
 									%div
 										%button{type:"submit",class:"btn"}
 											Enviar

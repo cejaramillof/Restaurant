@@ -1,1 +1,1 @@
-"use strict";!function(){function n(n){n.focus()}var t="#contact-form";$(t).find(".input").on("change",function(t){var c=$(t.target),o=c.next();n(o)})}();
+"use strict";!function(){function n(){document.querySelector(i).checkValidity()}function t(n){$(".step.active").removeClass("active"),n.addClass("active"),n.find(".input").focus()}var i="#contact-form";$(i).find(".input").on("change",function(i){var c=$(i.target),e=c.parent().next(".step");e.length>0?t(e):n()})}();
