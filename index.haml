@@ -89,7 +89,10 @@
 							.col-xs-2.col-md-1.text-center
 								.box
 									-3.times do |i|
-										.path-step
+										-if i == 0
+											.path-step.active
+										-else
+											.path-step
 										%br
 							.col-xs-5
 								.box
