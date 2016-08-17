@@ -226,7 +226,7 @@ textarea {
 	&.active-n{
 		opacity: 1;
 		background-color: red;
-		box-shadow: 0px 0px 5px rgb(255,0,0,0.8);
+		box-shadow: 0px 0px 5px rgba(255,0,0,0.8);
 	}
 }
 
@@ -251,6 +251,10 @@ textarea {
 		}
 
 	}
+}
+
+#map {
+	height: 500px;
 }
 
 /* ==========================================================================

@@ -46,6 +46,7 @@
 		}else{
 			let $fieldset_invalido = $(selector).find(".input:invalid").first().parent()
 			siguiente($fieldset_invalido)
+			$(".step.active").removeClass("active")
 			$(".path-step.active").addClass("active-n")
 		}
 	}
