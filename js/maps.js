@@ -24,6 +24,12 @@
 		const map = new google.maps.Map(
 			document.getElementById('map'), {center: my_place, zoom: 15})
 		
+		const marker = new google.maps.Marker({
+			map: map,
+			position: my_place,
+			title: "RestauranteFacilito",
+			visible: true
+		})
 		UserLocation.get((coords)=>{
 			//Calcular distancia del usuario al restaurante
 			

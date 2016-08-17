@@ -60,7 +60,7 @@
 		const $description = $("#description")
 		const descriptionHeight = $description.height()
 	
-		return $(window).scrollTop() > $(window).height() - (descriptionHeight * 2)
+		return $(window).scrollTop() > $(window).height() - (descriptionHeight * 3)
 	}
 	
 })()
