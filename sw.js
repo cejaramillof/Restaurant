@@ -7,3 +7,15 @@ self.addEventListener("install",function(ev){
 					return cache.addAll(cache_urls)
 				})
 })
+
+self.addEventListener("fetch",function(ev){
+	ev.respondWith(
+		caches.match(ev.request)
+					.then(function(response){
+						if(response){
+							return response
+						}
+						return fetch(ev.request)
+					})
+	)
+})
