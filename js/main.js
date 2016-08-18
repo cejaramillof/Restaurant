@@ -1,3 +1,7 @@
+if(navigator.serviceWorker){
+	navigator.serviceWorker.register("/sw.js")
+}
+
 ;(function(){
 	//Si menu esta oculto o no, sticky false = oculto
 	let sticky = false
