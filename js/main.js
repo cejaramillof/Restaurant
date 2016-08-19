@@ -20,11 +20,10 @@ if(navigator.serviceWorker){
 	$("#sticky-navigation").removeClass("hidden")
 	$("#sticky-navigation").slideUp(0)
 	
-	$("#menu-opener").on("click",function(){
-		$("#responsive-nav ul").toggleClass("active")
-		$(this).toggleClass("glyphicon-menu-hamburger")
-	})
+	$("#menu-opener").on("click",toggleNav)
 	
+	$(".menu-link").on("click",toggleNav)
+										 
 	setInterval(()=>{
 		
 		if(currentPosition < imageCounter){
@@ -52,6 +51,11 @@ if(navigator.serviceWorker){
 			unStickNavigation()
 		}
 	})
+	
+	function toggleNav(){
+		$("#responsive-nav ul").toggleClass("active")
+		$("#menu-opener").toggleClass("glyphicon-menu-hamburger")
+	}
 	
 	function stickNavigation(){
 		$("#description").addClass("fixed").removeClass("absolute")

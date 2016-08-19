@@ -36,11 +36,11 @@
 						%i.glyphicon.glyphicon-time
 						Abierto Ahora
 			%nav.fixed.top.right.navigation.white-text#navigation
-				-menu = ["Home", "Menú", "Galería", "Contacto", "Cómo llegar"]
+				-menu = [{title:"Home",link:"#home"}, {title:"Menú",link:"#menu"}, {title:"Galería",link:"#gallery"}, {title:"Contacto",link:"#contact"}, {title:"Cómo llegar",link:"#location"}]
 				%ul.list-inline
 					-menu.each do |item|
 						%li
-							%a{}= item
+							%a{href:item[:link]}= item[:title]
 			.absolute.black.large-padding.left.white-text.full-width#description
 				.row.middle-xs.center-xs
 					.col-xs-7.col-sm-6.white-text.medium
@@ -52,7 +52,7 @@
 								%ul.list-inline
 									-menu.each do |item|
 										%li
-											%a{}= item
+											%a.menu-link{href:item[:link]}= item[:title]
 	.text-center.relative#menu
 		.absolute.white#menu-title
 			%h2.dancing-script.title Menú
