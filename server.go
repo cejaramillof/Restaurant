@@ -35,6 +35,10 @@ func main() {
         http.ServeFile(w, r,path)
     })
 
+		port := os.Getenv("PORT")
+		if port == "" {
+			port = "8080"
+		}
     log.Println("Server running on :8005")
     log.Fatal(http.ListenAndServe(":8005", nil))
 }
