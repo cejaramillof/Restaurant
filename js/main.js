@@ -20,6 +20,10 @@ if(navigator.serviceWorker){
 	$("#sticky-navigation").removeClass("hidden")
 	$("#sticky-navigation").slideUp(0)
 	
+	$("#menu-opener").on("click",function(){
+		$("#responsive-nav ul").toggleClass("active")
+	})
+	
 	setInterval(()=>{
 		
 		if(currentPosition < imageCounter){

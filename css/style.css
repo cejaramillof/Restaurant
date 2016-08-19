@@ -15,6 +15,7 @@ html {
 html,
 body {
   height: 100%;
+  width: 100%;
 }
 
 /*
@@ -252,6 +253,10 @@ textarea {
   height: 500px;
 }
 
+#menu-opener {
+  display: none;
+}
+
 /* ==========================================================================
    Helper classes
    ========================================================================== */
@@ -423,6 +428,38 @@ textarea {
    These examples override the primary ('mobile first') styles.
    Modify as content requires.
    ========================================================================== */
+@media only screen and (max-width: 500px) {
+  #responsive-nav ul {
+    top: 90px;
+  }
+}
+
+@media only screen and (max-width: 960px) {
+  #menu-opener {
+    display: block;
+  }
+  #responsive-nav ul {
+    position: absolute;
+    width: 100%;
+    font-size: 1.5em;
+    top: 80px;
+    background-color: #222;
+    left: 0px;
+    text-align: center;
+    max-height: 0px;
+    overflow: hidden;
+    transition: all 0.4s;
+  }
+  #responsive-nav ul.active {
+    max-height: 80vh;
+  }
+  #responsive-nav ul li {
+    display: block;
+    margin-top: 1em;
+    padding: 10px 15px;
+  }
+}
+
 /* ==========================================================================
    Print styles.
    Inlined to avoid the additional HTTP request:
