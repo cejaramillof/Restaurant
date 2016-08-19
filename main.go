@@ -3,6 +3,7 @@ import (
     "log"
     "net/http"
     "strings"
+		"os"
 )
 
 func main() {
@@ -36,9 +37,11 @@ func main() {
     })
 
 		port := os.Getenv("PORT")
+		
 		if port == "" {
 			port = "8080"
 		}
-    log.Println("Server running on :8005")
-    log.Fatal(http.ListenAndServe(":8005", nil))
+		
+    log.Println("Server running on :"+port)
+    log.Fatal(http.ListenAndServe(":"+port, nil))
 }
