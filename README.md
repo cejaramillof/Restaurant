@@ -9,7 +9,12 @@ Proyecto de prueba en tecnologías frontend, basado en un restaurante ficticio y
 * AJAX
 * GEOLOCALIZACIÓN
 * SERVICEWORKER
-* RESPONSIVE DESIGN (in process)
+* RESPONSIVE DESIGN
+
+https://web-restaurante-facilito.herokuapp.com/
+==============================
+
+POSTDATA: Es un poco lenta la web de test porque deshabilité que guardaran la web en cache, para tener dos vistas distintas al usar serviceworker o no. Y también porque esta en un servidor gratuito :)
 
 https://github.com/cejaramillof/Restaurant/archive/master.zip
 -----------------------------
