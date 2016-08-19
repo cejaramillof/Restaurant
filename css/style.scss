@@ -452,6 +452,9 @@ textarea {
 		.container .card {margin-top: -15%;}
 }
 @media only screen and (max-width: 960px) {
+		#navigation {
+			display: none!important;
+		}
     #menu-opener {
         display: block;
     }

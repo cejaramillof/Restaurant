@@ -19,7 +19,7 @@ if(navigator.serviceWorker){
 	
 	$("#sticky-navigation").removeClass("hidden")
 	$("#sticky-navigation").slideUp(0)
-	
+	checkScroll()
 	$("#menu-opener").on("click",toggleNav)
 	
 	$(".menu-link").on("click",toggleNav)
@@ -37,7 +37,9 @@ if(navigator.serviceWorker){
 		})
 	},4000)
 	
-	$(window).scroll(()=>{
+	$(window).scroll(checkScroll)
+	
+	function checkScroll(){
 		const inBottom = isInBottom()
 		
 		if(inBottom && !sticky){
@@ -50,8 +52,7 @@ if(navigator.serviceWorker){
 			sticky = false
 			unStickNavigation()
 		}
-	})
-	
+	}
 	function toggleNav(){
 		$("#responsive-nav ul").toggleClass("active")
 		$("#menu-opener").toggleClass("glyphicon-menu-hamburger")
