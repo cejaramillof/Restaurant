@@ -429,9 +429,10 @@ textarea {
    These examples override the primary ('mobile first') styles.
    Modify as content requires.
    ========================================================================== */
-@media only screen and (max-width: 500px) {
-  #responsive-nav ul {
-    top: 90px;
+@media only screen and (max-heigth: 600px) {
+  #contact,
+  .container .card {
+    margin-top: -15%;
   }
 }
 
@@ -462,6 +463,12 @@ textarea {
     display: block;
     margin-top: 1em;
     padding: 10px 15px;
+  }
+}
+
+@media only screen and (max-width: 500px) {
+  #responsive-nav ul {
+    top: 95px;
   }
 }
 

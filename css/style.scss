@@ -447,18 +447,15 @@ textarea {
 @media only screen and (min-width: 35em) {
     /* Style adjustments for viewports that meet the condition */
 }
-@media only screen and (max-width: 500px) {
-		#responsive-nav {
-			ul {
-				top: 90px;
-			}
-		}
+@media only screen and (max-heigth: 600px){
+		#contact, 
+		.container .card {margin-top: -15%;}
 }
 @media only screen and (max-width: 960px) {
     #menu-opener {
         display: block;
     }
-		.path-step{
+		.path-step {
 				display: inline-block;
 				margin-rigth: 1em;
 		}
@@ -486,7 +483,13 @@ textarea {
       }
   	}
 }
-
+@media only screen and (max-width: 500px) {
+		#responsive-nav {
+			ul {
+				top: 95px;
+			}
+		}
+}
 @media print,
        (min-resolution: 1.25dppx),
        (min-resolution: 120dpi) {
