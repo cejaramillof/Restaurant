@@ -61,7 +61,7 @@
 		$next_step.find(".input").focus()
 
 		// Coordinar los circulos
-		const posicion = ($next_step.index(".step") * 2) + 1
+		const posicion = ($next_step.index(".step")) + 1
 		
 		const $circle = $(".path-step:nth-child("+posicion+")")
 		
