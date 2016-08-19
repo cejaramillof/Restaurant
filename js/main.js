@@ -22,6 +22,7 @@ if(navigator.serviceWorker){
 	
 	$("#menu-opener").on("click",function(){
 		$("#responsive-nav ul").toggleClass("active")
+		$(this).toggleClass("glyphicon-menu-hamburger")
 	})
 	
 	setInterval(()=>{
